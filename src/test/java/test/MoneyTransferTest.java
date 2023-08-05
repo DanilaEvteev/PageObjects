@@ -42,7 +42,7 @@ public class MoneyTransferTest {
         var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
         verificationPage.validVerify(verificationCode);
 
-        var amount = 500;//amount for transfer
+        var amount = 500;
         var dashboardPage = new DashboardPage();
         var cardInfoTo = DataHelper.getCardInfoToSecond();
         var startCardBalance = dashboardPage.getStartBalance(cardInfoTo);
@@ -64,9 +64,9 @@ public class MoneyTransferTest {
         var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
         verificationPage.validVerify(verificationCode);
 
-        var amount = -500;//amount for transfer
+        var amount = -500;
         var dashboardPage = new DashboardPage();
-        var cardInfoTo = DataHelper.getCardInfoToFirst(); // transfer to first from second card
+        var cardInfoTo = DataHelper.getCardInfoToFirst();
         var startCardBalance = dashboardPage.getStartBalance(cardInfoTo);
         var choiceTo = dashboardPage.choiceTransferTo(cardInfoTo);
         choiceTo.moneyTransfer(cardInfoTo, amount);
@@ -106,7 +106,7 @@ public class MoneyTransferTest {
         var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
         verificationPage.validVerify(verificationCode);
 
-        var amount = 500;//amount for transfer
+        var amount = 500;
         var dashboardPage = new DashboardPage();
         var cardInfoTo = DataHelper.getCardInfoWrongToFirst();
         var startCardBalance = dashboardPage.getStartBalance(cardInfoTo);
